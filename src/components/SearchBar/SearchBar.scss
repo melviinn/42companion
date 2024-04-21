@@ -1,0 +1,50 @@
+@import "../../styles/globals.scss";
+
+.searchbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $text-color;
+  font-family: "Futura Std Book", sans-serif;
+
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 4px;
+    border-radius: 8px;
+    background-color: $bg-color;
+    color: $text-color;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+
+    .searchbar {
+      padding: 4px;
+      border: none;
+      background-color: transparent;
+      color: $text-color;
+      font-size: 16px;
+      font-family: "Futura Std Book", sans-serif;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .searchButton {
+      padding: 6px 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      border: none;
+      background-color: $tertiary-color;
+      color: #fff;
+      font-size: 16px;
+      font-family: "Futura Std Book", sans-serif;
+      cursor: pointer;
+    }
+  }
+}
