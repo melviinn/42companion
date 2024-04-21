@@ -2,13 +2,18 @@ import { FaSearch } from "react-icons/fa";
 import "./SearchBar.scss";
 
 const SearchBar = () => {
+  const handleInput = (e) => {
+    console.log(e.target.value);
+  };
+
   return (
     <div className="searchbar-container">
-      <form role="search" className="search">
+      <form role="form" method="get" className="search">
         <input
           type="text"
           className="searchbar"
-          placeholder="Search..."
+          placeholder="Search for projects, students, etc..."
+          onChange={handleInput}
         ></input>
         <button type="submit" className="searchButton">
           <FaSearch />

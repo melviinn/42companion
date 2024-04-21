@@ -1,4 +1,4 @@
-import { FaCog, FaHome } from "react-icons/fa";
+import { BookCopy, GanttChart, Home, Settings, UsersRound } from "lucide-react";
 import "./Sidebar.scss";
 
 const Sidebar = () => {
@@ -11,13 +11,25 @@ const Sidebar = () => {
       </div>
       <div className="items-container">
         <div className="item">
-          <FaHome className="icon" />
+          <Home size={18} strokeWidth={2} />
+          Home
         </div>
         <div className="item">
-          <FaCog className="icon" />
+          <UsersRound size={18} strokeWidth={2} />
+          Students
         </div>
-        <div className="item"></div>
-        <div className="item"></div>
+        <div className="item">
+          <GanttChart size={18} strokeWidth={2} />
+          Projects
+        </div>
+        <div className="item">
+          <BookCopy size={18} strokeWidth={2} />
+          Guides
+        </div>
+        <div className="item">
+          <Settings size={18} strokeWidth={2} />
+          Settings
+        </div>
       </div>
     </div>
   );

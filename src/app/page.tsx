@@ -1,7 +1,7 @@
 "use client";
 
 import { Header, Sidebar } from "@/components/index";
-import { MainContent } from "@/sections/index";
+import MainContent from "@/pages/MainContent/MainContent";
 import { usePathname } from "next/navigation";
 
 export default function Home() {

@@ -1,59 +1,37 @@
-import Image from "next/image";
-import { FaUser } from "react-icons/fa";
-import { IoMdSettings } from "react-icons/io";
-import { IoLogOut } from "react-icons/io5";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 import "./ProfileButton.scss";
 
 const ProfileButton = () => {
-  const handleClick = () => {
-    const dropdown = document.querySelector(".dropdown");
-    if (dropdown.classList.contains("hidden")) {
-      dropdown.classList.remove("hidden");
-    } else {
-      dropdown.classList.add("hidden");
-    }
-  };
-
   return (
-    <button className="profile-btn">
-      <Image
-        src="https://github.com/shadcn.png"
-        className="avatar-img"
-        width={40}
-        height={40}
-        alt="avatar"
-        onClick={handleClick}
-      ></Image>
-      <div className="dropdown hidden">
-        <div className="dropdown-avatar-profile">
-          <div className="dropdown-item-1 font-medium">
-            <Image
-              src="https://github.com/shadcn.png"
-              className="avatar-img"
-              width={30}
-              height={30}
-              alt="avatar"
-            ></Image>
-            <div className="user-infos">
-              <p>mduchauf</p>
-              <p>mduchauf@student.42.fr</p>
-            </div>
-          </div>
-        </div>
-        <div className="dropdown-item font-medium">
-          <FaUser className="user-icon" />
-          Profile
-        </div>
-        <div className="dropdown-item font-medium">
-          <IoMdSettings />
-          Settings
-        </div>
-        <div className="dropdown-item font-medium">
-          <IoLogOut />
-          Logout
-        </div>
-      </div>
-    </button>
+    <DropdownMenu>
+      <DropdownMenuTrigger>
+        <Avatar>
+          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent onCloseAutoFocus={(e) => e.preventDefault()}>
+        <DropdownMenuLabel className="dropdown-label">
+          My Account
+        </DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem className="dropdown-item">Profile</DropdownMenuItem>
+        <DropdownMenuItem className="dropdown-item">Billing</DropdownMenuItem>
+        <DropdownMenuItem className="dropdown-item">Settings</DropdownMenuItem>
+        <DropdownMenuItem className="dropdown-item item-logout">
+          LogOut
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 };
 
