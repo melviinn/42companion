@@ -1,14 +1,13 @@
+"use client";
+
+import { Header, Sidebar } from "@/components/index";
 import { GeistSans } from "geist/font/sans";
-import { type Metadata } from "next";
-import { Inter } from "next/font/google";
 import "../styles/globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "42companion",
-  description: "Your friendly companion for 42 students",
-};
+// export const metadata: Metadata = {
+//   title: "42companion",
+//   description: "Your friendly companion for 42 students",
+// };
 
 export default function RootLayout({
   children,
@@ -17,7 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={GeistSans.className}>{children}</body>
+      <body className={GeistSans.className}>
+        <main>
+          <Sidebar />
+          <Header />
+          <div className="content">{children}</div>
+        </main>
+      </body>
     </html>
   );
 }

@@ -5,7 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "github.com",
+        hostname: "pbs.twimg.com",
         pathname: "**",
       },
     ],

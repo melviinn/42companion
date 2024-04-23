@@ -91,8 +91,13 @@ main {
     grid-area: header;
   }
 
-  .main-content {
+  .content {
     width: 100%;
+    height: calc(100vh - 72px);
+    background-color: #f2f2f2;
+    border: 1.5px solid $border-color;
+    border-left: none;
+    padding: 25px 35px;
     grid-area: main-content;
   }
 }

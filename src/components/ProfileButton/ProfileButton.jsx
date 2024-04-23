@@ -19,7 +19,10 @@ const ProfileButton = () => {
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
-      <DropdownMenuContent onCloseAutoFocus={(e) => e.preventDefault()}>
+      <DropdownMenuContent
+        onCloseAutoFocus={(e) => e.preventDefault()}
+        className="mr-8"
+      >
         <DropdownMenuLabel className="dropdown-label">
           My Account
         </DropdownMenuLabel>

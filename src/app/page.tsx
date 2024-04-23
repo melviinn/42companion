@@ -1,16 +1,11 @@
 "use client";
 
-import { Header, Sidebar } from "@/components/index";
-import MainContent from "@/pages/MainContent/MainContent";
-import { usePathname } from "next/navigation";
+import Home from "@/pages/Home/Home";
 
-export default function Home() {
-  const pathname = usePathname();
+export default function App() {
   return (
-    <main>
-      <Sidebar />
-      {pathname !== "/login" ? <Header /> : null}
-      <MainContent />
-    </main>
+    <>
+      <Home />
+    </>
   );
 }

@@ -2,14 +2,13 @@
 
 import ProfileButton from "../ProfileButton/ProfileButton";
 import SearchBar from "../SearchBar/SearchBar";
-import "./Header.scss";
 
 const Header = () => {
   return (
-    <header className="header">
-      <div className="header-container">
+    <header className="w-full bg-white text-gray-900 px-8 py-4">
+      <div className="w-full flex justify-between items-center">
         <SearchBar />
-        <div className="profile-container">
+        <div className="flex items-center">
           <ProfileButton />
         </div>
       </div>
